@@ -1,10 +1,9 @@
-import { useState } from "react";
-import Layout from "./layout/Main";
+import Home from "@/pages/Home"
 
 function App() {
 	return (
 		<>
-			<Layout />
+			<Home />
 		</>
 	);
 }

@@ -1,3 +1,4 @@
+import { ReactNode } from "react"
 import "./MainLayout.css";
 
 const Header = () => {
@@ -12,31 +13,11 @@ const Header = () => {
 	);
 };
 
-const ContentContainer = () => {
-	// const [folders, setFolders] = useState([
-	// 	{ name: "Folder 1" },
-	// 	{ name: "Folder 2" },
-	// 	{ name: "Folder 3" },
-	// 	{ name: "Folder 4" },
-	// 	{ name: "Folder 5" },
-	// 	{ name: "Folder 6" },
-	// ]);
-
-	return (
-		<section className='main_content_container'>
-			<div className='main_content'>
-				<button className='create_folder'>Create Folder</button>
-			</div>
-			<div></div>
-		</section>
-	);
-};
-
-const Layout = () => {
+const Layout = ({ children } : { children: ReactNode }) => {
 	return (
 		<>
 			<Header />
-			<ContentContainer />
+			{children}
 		</>
 	);
 };
